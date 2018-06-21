@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Sacramento', cursive;
+      color: #777;
+    }
+
+    .caption {
+      position: absolute;
+      left: 0;
+      top: 40%;
+      width: 100%;
+      text-align: center;
+      color: #000;
+    }
+
+    .caption span.border {
+      color: #fff;
+      padding: 3px;
+      font-size: 100px;
+      letter-spacing: 5px;
+    }
+
+    h3 {
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font: 20px "Lato", sans-serif;
+      color: #111;
+    }
+
+    li {
+      list-style-type: none;
+      float: left;
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    i {
+      font-size: 3em;
+      color: white;
+    }
+
+    #body.imageOne {
+      background-image: url("background_art1.jpg");
+      height: 100%;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #body.imageTwo {
+      background-image: url("background_art2.jpg");
+      height: 100%;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #body.imageThree {
+      background-image: url("background_art3.jpg");
+      height: 100%;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #body.imageFour {
+      background-image: url("background_art4.jpg");
+      height: 100%;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #body.imageFive {
+      background-image: url("background_art5.jpg");
+      height: 100%;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="body" class="imageOne">
+    <div class="caption">
+      <span class="border">Fucken Barry Ni</span>
+      <br>
+      <span class="border">and Friends</span>
+      <br>
+      <ul>
+        <li>
+          <i class="fas fa-caret-square-left"></i>
+        </li>
+        <li>
+          <i class="fas fa-caret-square-right"></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  var bodyObj, className, index;
+
+  bodyObj = document.getElementById('body');
+  index = 0;
+  className = [
+    'imageOne',
+    'imageTwo',
+    'imageThree',
+    'imageFour',
+    'imageFive'
+  ];
+
+  function updateIndex() {
+    if (index < 4) {
+      index++;
+    }
+    else if (index == 4) {
+      index = 0;
+    }
+  }
+
+  bodyObj.onclick = function (e) {
+    e.currentTarget.className = className[index];
+    updateIndex();
+  }
+</script>
+
+</html>
